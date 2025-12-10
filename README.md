@@ -79,9 +79,9 @@ Bu proje tamamen eğitim ve kişisel gelişim amaçlı 🎓 geliştirilmiştir. 
 
 Bu proje, aşağıdaki ekip tarafından iş birliği ile geliştirilmiştir:
 
-* 🐍 **Halil BAŞPINAR (Python):** [Halil]((https://github.com/halilbsp))
-* 🎨 **Selahattin Eyüp ALTAŞ (C# WPF):** [Mikleo18]((https://github.com/Mikleo18))
-* 🕷️ **Hüseyin GENCAN:** [Hüseyin]((https://github.com/AmourHG))
+* 🐍 **Halil BAŞPINAR (Python):**  [Halil](https://github.com/halilbsp)
+* 🎨 **Selahattin Eyüp ALTAŞ (C# WPF):**  [Mikleo18](https://github.com/Mikleo18)
+* 🕷️ **Hüseyin GENCAN:**  [Hüseyin](https://github.com/AmourHG)
 
 *Mehmet Akif Ersoy Üniversitesi - Bilişim Sistemleri ve Teknolojileri*
 
