@@ -1,0 +1,73 @@
+﻿<Window x:Class="BtkDownloader.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="BTK Akademi İndirici" Height="450" Width="700"
+        Background="{DynamicResource WindowBackgroundBrush}">
+
+    <Window.Resources>
+        <SolidColorBrush x:Key="WindowBackgroundBrush" Color="#F5F5F5"/>
+        <SolidColorBrush x:Key="TextBrush" Color="#333333"/>
+        <SolidColorBrush x:Key="CardBackgroundBrush" Color="White"/>
+        <SolidColorBrush x:Key="BorderBrush" Color="#DDDDDD"/>
+    </Window.Resources>
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Margin="0,0,0,20">
+            <TextBlock Text="BTK Akademi İndirici" FontSize="24" FontWeight="Bold" 
+                       Foreground="{DynamicResource TextBrush}" VerticalAlignment="Center"/>
+            <Button   x:Name="ToggleTheme" Content="🌙" HorizontalAlignment="Right" Width="40" Click="ToggleTheme_Click"/>
+        </Grid>
+
+        <Border Grid.Row="1" Background="{DynamicResource CardBackgroundBrush}" CornerRadius="8" Padding="15" Margin="0,0,0,20">
+            <StackPanel>
+                <Grid Margin="0,0,0,10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="Kurs ID:" VerticalAlignment="Center" Width="80" Foreground="{DynamicResource TextBrush}"/>
+                    <TextBox x:Name="txtCourseId" Grid.Column="1" Padding="5"/>
+                </Grid>
+
+                <Grid Margin="0,0,0,10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="Auth Token:" VerticalAlignment="Center" Width="80" Foreground="{DynamicResource TextBrush}"/>
+                    <TextBox x:Name="txtToken" Grid.Column="1" Padding="5" Height="30" VerticalContentAlignment="Center"/>
+                </Grid>
+
+                <Grid Margin="0,0,0,10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="Klasör:" VerticalAlignment="Center" Width="80" Foreground="{DynamicResource TextBrush}"/>
+                    <TextBox x:Name="txtFolderPath" Grid.Column="1" Padding="5" IsReadOnly="True"/>
+                    <Button Content="..." Grid.Column="2" Width="40" Margin="5,0,0,0" Click="BtnSelectFolder_Click"/>
+                </Grid>
+
+                <Button x:Name="btnStart" Content="İndirmeyi Başlat" Height="35" Background="#007ACC" Foreground="White" FontWeight="Bold" Click="BtnStart_Click"/>
+            </StackPanel>
+        </Border>
+
+        <TextBox x:Name="txtLogs" Grid.Row="2" Background="{DynamicResource CardBackgroundBrush}" 
+                 Foreground="{DynamicResource TextBrush}"
+                 IsReadOnly="True" VerticalScrollBarVisibility="Auto" 
+                 TextWrapping="Wrap" FontFamily="Consolas" Padding="10"/>
+
+        <StackPanel Grid.Row="3" Margin="0,10,0,0">
+            <TextBlock x:Name="lblStatus" Text="Hazır" Foreground="{DynamicResource TextBrush}" Margin="0,0,0,5"/>
+            <ProgressBar x:Name="progressBar" Height="15" Minimum="0" Maximum="100"/>
+        </StackPanel>
+    </Grid>
+</Window>
